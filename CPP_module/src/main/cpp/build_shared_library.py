@@ -99,7 +99,7 @@ def main() -> None:
             shutil.rmtree(jniLibs)
         jniLibs.mkdir(parents=True)
 
-        clang_path = toolchain_path.joinpath("bin", f'{target.triple}{abi_version}-clang' + (".exe" if system() == "Windows" else ""))
+        clang_path = toolchain_path.joinpath("bin", f'{target.triple}{abi_version}-clang' + (".cmd" if system() == "Windows" else ""))
         build_cmd = [
             str(clang_path),
             "-fPIC", "-shared",
