@@ -139,3 +139,5 @@ add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
 ```
 
 With this approach, the `.aar` correctly contains `prefab/modules/CPP_module/libs/android.<abi>/libCPP_module.so` along with the `abi.json` files.
+
+PS: This bug is currently been tracked here: https://issuetracker.google.com/issues/491158080
